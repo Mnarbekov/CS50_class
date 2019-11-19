@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Best Practices
+{% endblock %}
+
+{% block main %}
+
+    <br> <b>Best practices </b></br>
+    <br>
+            {% for practice in practices%}
+                <br>{{practice.practice}}</br>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+{% endblock %}

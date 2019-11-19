@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Audience</th>
+                <th>Summary</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects%}
+            <tr>
+                <td>{{project.name}}</td>
+                <td>{{project.audience}}</td>
+                <td>{{project.summary}}</td>
+                <td>{{project.rating}}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Project
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="post">
+        <div class="form-group"> New Project</div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="name" size="100" placeholder="Project name" type="text">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="audience" placeholder="Audience: what do they care about?" size="100"  type="text">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="summary" placeholder="Summary (in one sentence)" size="100" type="text">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="why" placeholder="Why do you do this? What do you want to highlight?" size="100" type="text">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="location" placeholder="Location: where do you store it?" size="100" type="text">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="rating" placeholder="Project rating (out of 10)" size="100" type="text">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Updated
+{% endblock %}
+
+{% block main %}
+    <form action="/updated" method="post">
+        <div class="form-group"> Update/Review </div>
+        <div class="form-group" align="right">
+           Project Name: <input autocomplete="off" autofocus class="form-control" name="name" size="100" value="{{project.name}}" readonly>
+        </div>
+
+        <div class="form-group" align="right">
+            Audience: <input class="form-control" name="audience" value="{{project.audience}}" size="100"  type="text">
+        </div>
+
+        <div class="form-group" align="right">
+            Summary: <input class="form-control" name="summary" value="{{project.summary}}" size="100" type="text">
+        </div>
+
+        <div class="form-group" align="right">
+            Why: <input class="form-control" name="why" value="{{project.why}}" size="100" type="text">
+        </div>
+
+        <div class="form-group" align="right">
+            Location: <input class="form-control" name="location" value="{{project.location}}" size="100" type="text">
+        </div>
+
+        <div class="form-group" align="right">
+            Rating: <input class="form-control" name="rating" value="{{project.rating}}" size="100" type="text">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}
